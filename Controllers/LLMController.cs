@@ -71,7 +71,7 @@ public class LLMController : Controller
         }
         else
         {
-            finalPrompt = $"Tell the user very breifly (within one sentence) that you have access to the database and can query Users and Comments table {user}";
+            finalPrompt = $"Tell the user very briefly (within one sentence) that you have access to the database and can query Users and Comments table {user}";
 
             // Ollama returns plain string tokens
             await foreach (var t in _ollama.GenerateAsync(finalPrompt))
