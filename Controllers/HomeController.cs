@@ -228,7 +228,7 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Download(string file)
     {
-        // Vulnerable file concatination 
+        // Vulnerable file concatenation
         var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", file);
 
         if (!System.IO.File.Exists(path))
